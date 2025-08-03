@@ -10,11 +10,12 @@ function Next() {
   if (!user) {
     return <div>No user found, please login first.</div>;
   }
+  const name = user.email.charAt(0).toUpperCase() + user.email.slice(1)
   return (
     <div>
       <nav className='Next_nav'>
         <ul>
-            <li>Hi {user.email} </li>
+            <li>Hi {name} </li>
         </ul>
       </nav>
     </div>
